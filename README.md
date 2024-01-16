@@ -1,5 +1,3 @@
-# Caio's dotfiles
-
 ## How To Install (Windows):
 
 1. ### Powershell 
@@ -73,13 +71,13 @@
 	- Z: 
 
 		```powershell
-		Install-Module -Name z -Force
+		Install-Module -Name z -Force -AllowClobber
 		```
 
 	- PSReadLine - Autocomplete
 
 		```powershell
-		Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+		Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 		```
 
 		Probably PSReadLine is already installed on Powershell if you're using a recent version of it.
@@ -98,33 +96,4 @@
 		Install-Module -Name PSFzf -Scope CurrentUser -Force
 		```
 
-### Additional info
-
-- To use the same repository folder after cloning, you need to create a symbolic link to each file/folder:
-
-	```powershell 
-	new-item -itemtype symboliclink -path <to> -name powershell -value <from>
-	```
-
-	- where: 
-
-		`-name` : the name of the created folder
-		
-		`-path` : where the folder will be created
-		
-		`-value` : where the original folder is
-
-	- Example: 
-
-		```powershell
-		new-item -itemtype symboliclink -path C:\Users\caio_\.config\ -name powershell -value   C:\Users\caio_\dotfiles\.config\powershell
-		```
-
-- Some configuration lines, such as "Set-PSReadLineOption -PredictionSource History", is set inside user_profile.ps1 and loaded when Powershell opens.
-
 - [In case of fire, this is the video where I learned it all from](https://www.youtube.com/watch?v=5-aK2_WwrmM)
-
-
-## How To Install (Linux):
-
-Soon
